@@ -1,26 +1,38 @@
 <template>
+  <div class="main">
   <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>안녕하세요</h1>
+
+    <InputCustom />
+    <div class="sub">
+      <card-ui :cardTitle="'안녕하세연'" :title="'Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit doloribus blanditiis sed nostrum, dolore tempora dolorem harum! Possimus dicta natus asperiores deleniti ipsa cum quasi perspiciatis! Animi veritatis minima fugit.'" :cardCount="1"/>
+      <card-ui />
+    </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+// 정의
+import InputCustom from './components/inputName.vue';
+import CardUi from './components/card-ui.vue';
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  // 등록
+  components :{
+    InputCustom,
+    CardUi,
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.main {
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+}
+.sub {
+  display: flex;
+  justify-content: space-around;
+}
+h1{
+  margin: 50px 0;
 }
 </style>
