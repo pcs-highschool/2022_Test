@@ -1,7 +1,8 @@
 <template>
   <div class="cardbox">
     
-    <h2 v-if="cardTitle && cardCount">{{cardTitle}} | {{cardCount}}</h2>
+    <h2 v-if="cardTitle">{{cardTitle}} </h2>
+    <span v-if="cardCount">{{cardCount}}</span>
     <h2 v-else>제목 없슴</h2>
     <p v-if="title">{{title}}</p>
     <p v-else>내용 없슴</p>
