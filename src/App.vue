@@ -32,8 +32,12 @@
   text-align: center;
 }
 .sub {
+  width: 1200px;
+  margin: 0 auto;
+
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 h1{
   margin: 50px 0;
